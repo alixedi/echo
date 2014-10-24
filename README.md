@@ -1,7 +1,7 @@
 echo
 ====
 
-A micro library for retrying failing operations inspired by [retry](https://github.com/igorw/retry). It's just as simple as decorating the function. It will retry n number of times and then raise a `FailingTooHard` exception.
+A micro library for retrying failing operations inspired by [retry](https://github.com/igorw/retry). It's just as simple as decorating the function. It will retry `n` number of times and then raise a `FailingTooHard` exception if it doesn't succeed.
 ```python
 import requests
 from pyecho import echo
@@ -13,6 +13,8 @@ def fetch():
 
 fetch()
 ```
+## Installation
+echo can be installed using Pypi, `pip install pyecho`
 
 ## License
 `echo` is distributed under MIT license, see `LICENSE` for more details.
