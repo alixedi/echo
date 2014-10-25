@@ -14,11 +14,7 @@ class TestEcho(unittest.TestCase):
         @echo(2)
         def conct():
             return 2 + "two"
-        try:
-            conct()
-        except FailingTooHard:
-            error = True
-        self.assertTrue(error)
+        self.assertRaises(FailingTooHard, conct)
 
 
 if __name__ == "__main__":
