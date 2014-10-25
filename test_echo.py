@@ -8,7 +8,7 @@ class TestEcho(unittest.TestCase):
         @echo(5)
         def add():
             return 2 + 1
-        self.assertEquals(add(), 3)
+        self.assertEqual(add(), 3)
 
     def test_with_exception(self):
         @echo(2)
