@@ -1,5 +1,5 @@
 import unittest
-from echo import echo, FailingTooHard
+from pyecho import echo, FailingTooHard
 
 
 class TestEcho(unittest.TestCase):
