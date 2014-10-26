@@ -1,2 +1,2 @@
-from echo import echo
-from echo import FailingTooHard
+from .echo import echo
+from .echo import FailingTooHard
