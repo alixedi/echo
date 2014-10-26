@@ -3,7 +3,9 @@ from pyecho import echo, FailingTooHard
 
 
 def fails_n_times(n, exception_type=Exception):
-    # remembers how many times it's called, fails n times, returns None after
+    """
+    Remembers how many times it's called, fails n times, returns None after
+    """
     def fail_func():
         if fail_func.called >= n:
             return
