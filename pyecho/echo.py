@@ -17,17 +17,7 @@ class FailingTooHard(Exception):
     pass
 
 
-def parametrized(dec):
-    """Makes the decorator take arguments"""
-    def layer(*args, **kwargs):
-        def repl(f):
-            return dec(f, *args, **kwargs)
-        return repl
-    return layer
-
-
-@parametrized
-def echo(f, retries):
+def core(f, retries):
     @wraps(f)
     def wrapper(*args, **kwargs):
         i = 0
@@ -39,3 +29,9 @@ def echo(f, retries):
                 if retries == i:
                     raise FailingTooHard(e)
     return wrapper
+
+
+def echo(retries):
+    def repl(f):
+        return core(f, retries)
+    return repl
