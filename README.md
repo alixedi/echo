@@ -1,5 +1,6 @@
 echo
 ====
+[![Build Status](https://travis-ci.org/itsnauman/echo.svg?branch=master)](https://travis-ci.org/itsnauman/echo)
 
 A micro library for retrying failing operations inspired by [retry](https://github.com/igorw/retry). It's just as simple as decorating the function. It will retry `n` number of times and then raise a `FailingTooHard` exception if it doesn't succeed.
 ```python
